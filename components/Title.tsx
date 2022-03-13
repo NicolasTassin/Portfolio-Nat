@@ -47,7 +47,7 @@ const StyledButton = Styled.button`
 export default function Title(){
     const title = "Hello! I'm Sasiya"
     const subtitle = "I'm a Designer"
-    const subtitle2 = "I love fun UI, collaboration and solving problems" 
+    const subtitle2 = "I love fun UI, collaboration and solving problem" 
     return (
         <StyledContainer>
             <StyledH1>{title}</StyledH1>
