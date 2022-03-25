@@ -10,7 +10,6 @@ const StyledContainer = Styled.div`
 const StyledLogoContainer = Styled.div`
     display: flex;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -39,16 +38,12 @@ color: #ADADAD; /* button text color */
 outline: none;
 background: transparent;
 border: none;
-//border-bottom: 4px solid #eee;
-//letter-spacing: 0.0625em;
-padding: 8px 10px; 
-text-transform: uppercase;
+padding: 8px 0px; 
+//text-transform: uppercase;
 font: bold 16px 'Bitter', sans-serif; /* use google font */
 line-height: 2;
 position: relative;
 display: inline-block;
-margin-right: 20px;
-margin-bottom: 20px;
 cursor: pointer;
 text-decoration: none; /* remove underline if using A instead of BUTTON tag */
 overflow: hidden;
@@ -88,16 +83,16 @@ export default function NavBar() {
       <StyledListContainer>
         <StyledList>
           <StyledListElement>
-            <a>Work</a>
+            <a>work</a>
           </StyledListElement>
           <StyledListElement>
-            <a>About</a>
+            <a>about</a>
           </StyledListElement>
           <StyledListElement>
             <a>Linktree</a>
           </StyledListElement>
           <StyledListElement>
-            <a>Contact</a>
+            <a>contact</a>
           </StyledListElement>
         </StyledList>
       </StyledListContainer>
