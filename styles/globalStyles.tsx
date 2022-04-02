@@ -22,8 +22,10 @@ font-weight: ${props => props.fontWeight || '400'};
 line-height: 24px;
 letter-spacing: 0em;
 text-align: left;
+`
 
-
-
-
+export const P = styled.p<{ fontSize?: string, fontWeight?: string }>`
+font-size: ${props => props.fontSize || '16px'};
+font-style: normal;
+font-weight: ${props => props.fontWeight || '400'};
 `

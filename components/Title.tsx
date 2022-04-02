@@ -20,10 +20,14 @@ const StyledH1 = Styled.h1`
     `;
 
 const StyledH3 = Styled.h3`
-    font-weight: 400, regular;
-    font-size: 14px;
+    font-weight: 400 ;
+    font-style: normal;
+    font-size: 16px;
     color: #ACACAC;
     margin: 5px auto;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+    letter: 5%;
     ;
     `;
 const StyledAnimatedH3 = Styled(StyledH3)`
