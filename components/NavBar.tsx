@@ -5,7 +5,13 @@ import Image from "next/image";
 const StyledContainer = Styled.div`
     display: flex;
     justify-content: space-between;
-    
+    @media (max-width: 768px) {
+      grid-template-row: 1fr 1fr;
+  }
+  @media (max-width: 500px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const StyledLogoContainer = Styled.div`
@@ -14,31 +20,25 @@ const StyledLogoContainer = Styled.div`
     
     
 `;
-
-
-const StyledListContainer = Styled.div`
-display: flex;
-width: 600px;
-justify-content: space-around;
-
-
-`;
 const StyledList = Styled.ul`
-display: flex;
-list-style-type: none;
-width: 600px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 20px;
 justify-content: space-around;
-
+margin-left:0;
+padding: 0;
+@media (max-width: 768px) {
+  margin-top:10%;
+  grid-template-row: 1fr 1fr 1fr 1fr;
+}
 
 `;
 const StyledListElement = Styled.li`
-color: #ADADAD; /* button text color */
-outline: none;
+color: #ADADAD;
 background: transparent;
 border: none;
 padding: 8px 0px; 
-//text-transform: uppercase;
-font: bold 16px 'Bitter', sans-serif; /* use google font */
+font: bold 16px 'Bitter', sans-serif;
 line-height: 2;
 position: relative;
 display: inline-block;
@@ -77,15 +77,12 @@ transition: all .5s;
 export default function NavBar() {
   return (
     <StyledContainer>
-      <StyledLogoContainer>
       <Image
               src="/logo.svg"
               alt="Project 1"
               width={200}
               height={50}
             />
-      </StyledLogoContainer>
-      <StyledListContainer>
         <StyledList>
           <StyledListElement>
             <a>work</a>
@@ -100,7 +97,6 @@ export default function NavBar() {
             <a>contact</a>
           </StyledListElement>
         </StyledList>
-      </StyledListContainer>
     </StyledContainer>
   );
 }
