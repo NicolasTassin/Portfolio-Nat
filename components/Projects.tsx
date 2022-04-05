@@ -21,26 +21,25 @@ const StyledCard = styled.div`
   align-items: center;
   cursor: pointer;
   position: relative;
+  h2, p{
+    opacity: 0;
+  }
+
+  :hover {
+    img{
+      opacity: 0.5;
+    }
+    h2, p{
+      opacity: 1;
+    }
+  }
   
 `;
-const StyledCardHover = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("/images/background.jpg");
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  opacity: 0;
-  }
-`;
+
 
 const StyledHoverContainer = styled.div`
-opacity: 0;
+
 position: absolute;
-:hover {
-  opacity: 1;
-}
 `;
 const StyledProjectTitle = styled(H2)`
   display: flex;
@@ -98,20 +97,20 @@ export default function Projects() {
     },
   ];
 
-  const handleMouseIn = (e: any, index: any) => {
-    e.target.style.opacity = "0.5";
-    console.log(index, 'index mousin');
-    //@ts-ignore
-    console.log(e.target, "is that queryssss");
-    setHover(true);
+  // const handleMouseIn = (e: any, index: any) => {
+  //   e.target.style.opacity = "0.5";
+  //   console.log(index, 'index mousin');
+  //   //@ts-ignore
+  //   console.log(e.target, "is that queryssss");
+  //   setHover(true);
     
     
-  };
+  // };
 
-  const handleMouseOut = (e: any, index: any) => {
-    e.target.style.opacity = "1";
-    setHover(false);
-  };
+  // const handleMouseOut = (e: any, index: any) => {
+  //   e.target.style.opacity = "1";
+  //   setHover(false);
+  // };
 
   const [hover, setHover] = React.useState(false);
 
@@ -121,10 +120,9 @@ export default function Projects() {
         console.log(index, 'index')
         return (
           <StyledCard
-            onMouseOver={(e) => handleMouseIn(e, index)}
-            onMouseLeave={(e) => handleMouseOut(e, index)}
+           
             key={index}
-            className={hover? 'ok' : 'notok'}
+           
           >
             <Image src={project.image} width="700" height="400" alt="" />
             <StyledHoverContainer className='show'>
@@ -137,62 +135,6 @@ export default function Projects() {
           </StyledCard>
         );
       })}
-      {/* <StyledCard
-        onMouseOver={() => setHover1(true)}
-        onMouseLeave={() => setHover1(false)}
-      >
-        <Image src={projects[0].image} width="700" height="400" alt="" />
-        {isHover1 && (
-          <StyledProjectTitle>{projects[0].title}</StyledProjectTitle>
-        )}
-        {isHover1 && (
-          <StyledProjectName>
-            <StyledUnderliner>{projects[0].name}</StyledUnderliner>
-          </StyledProjectName>
-        )}
-        {isHover1 && (
-          <StyledDescription>{projects[0].description}</StyledDescription>
-        )}
-      </StyledCard>
-      <StyledCard
-        onMouseEnter={() => setHover2(true)}
-        onMouseLeave={() => setHover2(false)}
-      >
-        <Image src={projects[1].image} width="700" height="400" alt="" />
-        {isHover2 && (
-          <StyledProjectTitle>{projects[1].title}</StyledProjectTitle>
-        )}
-        {isHover2 && <StyledProjectName>{projects[1].name}</StyledProjectName>}
-        {isHover2 && (
-          <StyledDescription>{projects[1].description}</StyledDescription>
-        )}
-      </StyledCard>
-      <StyledCard
-        onMouseEnter={() => setHover3(true)}
-        onMouseLeave={() => setHover3(false)}
-      >
-        <Image src={projects[2].image} width="700" height="400" alt="" />
-        {isHover3 && (
-          <StyledProjectTitle>{projects[2].title}</StyledProjectTitle>
-        )}
-        {isHover3 && <StyledProjectName>{projects[2].name}</StyledProjectName>}
-        {isHover3 && (
-          <StyledDescription>{projects[2].description}</StyledDescription>
-        )}
-      </StyledCard>
-      <StyledCard
-        onMouseEnter={() => setHover4(true)}
-        onMouseLeave={() => setHover4(false)}
-      >
-        <Image src={projects[3].image} width="700" height="400" alt="" />
-        {isHover4 && (
-          <StyledProjectTitle>{projects[3].title}</StyledProjectTitle>
-        )}
-        {isHover4 && <StyledProjectName>{projects[3].name}</StyledProjectName>}
-        {isHover4 && (
-          <StyledDescription>{projects[3].description}</StyledDescription>
-        )}
-      </StyledCard> */}
     </StyledCardContainer>
   );
 }
