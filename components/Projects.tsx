@@ -92,7 +92,7 @@ export default function Projects() {
     {
       title: "Smart Contract Analyst",
       description: "Project in progress",
-      image: "/project2.png",
+      image: "/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
     },
   ];
@@ -112,12 +112,12 @@ export default function Projects() {
   //   setHover(false);
   // };
 
-  const [hover, setHover] = React.useState(false);
+  
 
   return (
     <StyledCardContainer>
       {projects.map((project, index) => {
-        console.log(index, 'index')
+
         return (
           <StyledCard
            
