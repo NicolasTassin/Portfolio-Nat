@@ -97,23 +97,6 @@ export default function Projects() {
     },
   ];
 
-  // const handleMouseIn = (e: any, index: any) => {
-  //   e.target.style.opacity = "0.5";
-  //   console.log(index, 'index mousin');
-  //   //@ts-ignore
-  //   console.log(e.target, "is that queryssss");
-  //   setHover(true);
-    
-    
-  // };
-
-  // const handleMouseOut = (e: any, index: any) => {
-  //   e.target.style.opacity = "1";
-  //   setHover(false);
-  // };
-
-  
-
   return (
     <StyledCardContainer>
       {projects.map((project, index) => {
@@ -124,7 +107,7 @@ export default function Projects() {
             key={index}
            
           >
-            <Image src={project.image} width="700" height="400" alt="" />
+            <Image src="/image11.png" width="700" height="400" alt="" />
             <StyledHoverContainer className='show'>
               <StyledProjectTitle>{project.title}</StyledProjectTitle>
               <StyledProjectName>
