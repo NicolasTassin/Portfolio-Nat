@@ -107,7 +107,7 @@ export default function Projects() {
             key={index}
            
           >
-            <Image src="/image11.png" width="700" height="400" alt="" />
+            <Image src={project.image} width="700" height="400" alt="" />
             <StyledHoverContainer className='show'>
               <StyledProjectTitle>{project.title}</StyledProjectTitle>
               <StyledProjectName>
