@@ -70,7 +70,7 @@ export default function Projects() {
       title: "Application re-design",
       name: "The Moment",
       description: "Dating app UI Design",
-      image: "/image11.png",
+      image: "/homepage/image11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
     },
     {
@@ -78,7 +78,7 @@ export default function Projects() {
       name: "BOAR",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
-      image: "/image10.png",
+      image: "/homepage/image10.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
     },
     {
@@ -86,13 +86,13 @@ export default function Projects() {
       name: "DAILY UI",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
-      image: "/rectangle9.png",
+      image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
     },
     {
       title: "Smart Contract Analyst",
       description: "Project in progress",
-      image: "/rectangle9.png",
+      image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
     },
   ];
