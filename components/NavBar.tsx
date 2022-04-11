@@ -78,7 +78,7 @@ export default function NavBar() {
   return (
     <StyledContainer>
       <Image
-              src="/logo.svg"
+              src="/header/logo.svg"
               alt="Project 1"
               width={200}
               height={50}

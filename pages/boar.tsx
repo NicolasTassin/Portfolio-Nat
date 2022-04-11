@@ -99,6 +99,7 @@ const DoubleContent = styled.div`
     display: grid;
     grid-column: 1 / 4;
     grid-template-columns: 1fr 1fr;
+    margin-top: 10%;
 `;
 const ImageGrid = styled.div`
   display: grid;

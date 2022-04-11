@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 import { H1, H2, H3, P } from "../styles/globalStyles";
 
 const StyledCardContainer = styled.a`
@@ -21,25 +22,24 @@ const StyledCard = styled.div`
   align-items: center;
   cursor: pointer;
   position: relative;
-  h2, p{
+  h2,
+  p {
     opacity: 0;
   }
 
   :hover {
-    img{
+    img {
       opacity: 0.5;
     }
-    h2, p{
+    h2,
+    p {
       opacity: 1;
     }
   }
-  
 `;
 
-
 const StyledHoverContainer = styled.div`
-
-position: absolute;
+  position: absolute;
 `;
 const StyledProjectTitle = styled(H2)`
   display: flex;
@@ -62,8 +62,6 @@ const StyledDescription = styled(P)`
   justify-content: center;
 `;
 
-
-
 export default function Projects() {
   const projects = [
     {
@@ -72,6 +70,7 @@ export default function Projects() {
       description: "Dating app UI Design",
       image: "/homepage/image11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
+      appLink: "/themoment",
     },
     {
       title: "Application case study",
@@ -80,6 +79,7 @@ export default function Projects() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
       image: "/homepage/image10.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
+      appLink: "/boar",
     },
     {
       title: "UI design daily challenges",
@@ -88,34 +88,33 @@ export default function Projects() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
       image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
+      appLink: "/dailyui",
     },
     {
       title: "Smart Contract Analyst",
       description: "Project in progress",
       image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
+      appLink: "/smartcontract",
     },
   ];
 
   return (
     <StyledCardContainer>
       {projects.map((project, index) => {
-
         return (
-          <StyledCard
-           
-            key={index}
-           
-          >
-            <Image src={project.image} width="700" height="400" alt="" />
-            <StyledHoverContainer className='show'>
-              <StyledProjectTitle>{project.title}</StyledProjectTitle>
-              <StyledProjectName>
-                <StyledUnderliner>{project.name}</StyledUnderliner>
-              </StyledProjectName>
-              <StyledDescription>{project.description}</StyledDescription>
-            </StyledHoverContainer>
-          </StyledCard>
+          <Link href={project.appLink} key={index}>
+            <StyledCard key={index}>
+              <Image src={project.image} width="700" height="400" alt="" />
+              <StyledHoverContainer className="show">
+                <StyledProjectTitle>{project.title}</StyledProjectTitle>
+                <StyledProjectName>
+                  <StyledUnderliner>{project.name}</StyledUnderliner>
+                </StyledProjectName>
+                <StyledDescription>{project.description}</StyledDescription>
+              </StyledHoverContainer>
+            </StyledCard>
+          </Link>
         );
       })}
     </StyledCardContainer>

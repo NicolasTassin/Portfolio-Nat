@@ -24,6 +24,7 @@ letter-spacing: 0em;
 text-align: left;
 `
 
+
 export const P = styled.p<{ fontSize?: string, fontWeight?: string }>`
 font-size: ${props => props.fontSize || '16px'};
 font-style: normal;
