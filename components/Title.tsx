@@ -12,7 +12,9 @@ const StyledContainer = Styled.div`
 
 const StyledH1 = Styled.h1`
     font-weight: 400;
+    font-size: 36px;
     line-height: 45.25px;
+    font-family: "Merriweather", serif;
     `;
 
     const StyledAnimationContainer = Styled.div`
