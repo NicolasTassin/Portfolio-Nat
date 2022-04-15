@@ -4,14 +4,21 @@ import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { H1, H2, H3 } from "../styles/globalStyles";
+import { 
+  H1, 
+  H2, 
+  H3,
+  P, 
+  globalStyles 
+} from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   display: grid;
   font-family: Poppins, sans-serif;
 
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: ${globalStyles.globalGrid}; 
   grid-template-rows: repeat(auto, 1fr);
+  grid-row-gap: 20px;
 `;
 
 const StyledAppContainer = styled.div`
@@ -91,7 +98,7 @@ const Column3 = styled.div`
 `;
 
 const Content = styled.div<{ gridColumn?: string }>`
-  padding: 5% 0;
+  padding: 1% 0;
   margin: 0 10%;
   grid-column: ${(props) => props.gridColumn || "2 / 3"};
 `;
@@ -155,26 +162,27 @@ const DesignGoalContainer = styled.div`
 const DesignGoalTitle = styled.div`
   grid-column: 1;
   grid-row: 1;
+  div {
+    display: flex;  
+  }
 `;
 const HowItWorksContainer = styled.div`
   display: grid;
   grid-row: 2;
+  .title{
+      display: flex; 
+  }
+  
 `;
 const HowItWorksList = styled.div`
   display: grid;
   grid-row: 2 / 4;
   grid-template-columns: repeat(3, 25%);
   grid-template-row: 1fr 1fr;
-  grid-column-gap: 5%;
+  grid-column-gap: 3%;
 `;
-const HowItWorks1 = styled.div`
-  grid-column: 1;
-`;
-const HowItWorks2 = styled.div`
-  grid-column: 2;
-`;
-const HowItWorks3 = styled.div`
-  grid-column: 3;
+const HowItWorks = styled.div`
+  width: 90%
 `;
 
 const DesignGoalConclusion = styled.div`
@@ -182,11 +190,6 @@ const DesignGoalConclusion = styled.div`
   grid-row: 3;
 `;
 
-const ImageGrid = styled.div`
-  display: grid;
-  grid-row: 4;
-  grid-column: 2 / 3;
-`;
 
 const Imagecontainer = styled.div<{
   gridColumn?: string;
@@ -194,7 +197,22 @@ const Imagecontainer = styled.div<{
   margin?: string;
 }>`
   display: grid;
-  grid-column: ${(props) => props.gridColumn || "1 / 3"};
+  grid-column: ${(props) => props.gridColumn || "2 / 3"};
+  width: ${(props) => props.width || "100%"};
+  .title{
+    display: flex; 
+}
+`;
+const ImageBackground = styled.div<{
+  gridColumn?: string;
+  width?: string;
+  margin?: string;
+}>`
+  background-color: #2FC5B4;
+  grid-column: ${(props) => props.gridColumn || "1 / 4"};
+  display: grid;
+  grid-template-columns: ${globalStyles.globalGrid};
+  width: ${(props) => props.width || "100%"};
 `;
 
 const Project1: NextPage = () => {
@@ -227,64 +245,73 @@ const Project1: NextPage = () => {
 
       <OverviewContainer>
         <Content>
-          <H3>OVERVIEW</H3>
-          <H3>{content.overview.content}</H3>
+          <H3 fontWeight="700px" >OVERVIEW</H3>
+          <P>{content.overview.content}</P>
         </Content>
 
         <Threeseparator>
           <Column1>
-            <H3>MY ROLE</H3>
+            <H3 fontWeight="700px">MY ROLE</H3>
             <H3>UI/UX Designer</H3>
           </Column1>
           <Column2>
-            <H3>PROJECT TYPE</H3>
+            <H3 fontWeight="700px">PROJECT TYPE</H3>
             <H3>Application re-design</H3>
           </Column2>
         </Threeseparator>
         <Threeseparator>
           <Column1>
-            <H3>DURATION</H3>
+            <H3 fontWeight="700px">DURATION</H3>
             <H3>February - March 2022</H3>
           </Column1>
           <Column2>
-            <H3>TOOLS</H3>
+            <H3 fontWeight="700px">TOOLS</H3>
             <H3>Figma</H3>
           </Column2>
           <Column3>
-            <H3>LAUNCH</H3>
+            <H3 fontWeight="700px">LAUNCH</H3>
             <H3>Q2-2022</H3>
           </Column3>
         </Threeseparator>
       </OverviewContainer>
       <DesignGoalContainer>
         <DesignGoalTitle>
-          <H1>{content.designGoal.title}</H1>
+          <div>
+          <H2>DESIGN </H2>
+          <H2 fontWeight="700px" marginLeft="1%">GOAL</H2>
+          </div>
           <H3>{content.designGoal.description}</H3>
         </DesignGoalTitle>
         <HowItWorksContainer>
-          <H2>HOW IT WORKS</H2>
+          <div className="title">
+          <H2>HOW IT</H2>
+          <H2 fontWeight="700px" marginLeft="1%">WORKS</H2>
+          </div>
           <HowItWorksList>
-            <HowItWorks1>
-              <H2>{content.designGoal.content1.title}</H2>
+            <HowItWorks>
+              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content1.title}</H2>
               <H3>{content.designGoal.content1.content}</H3>
-            </HowItWorks1>
-            <HowItWorks2>
-              <H2>{content.designGoal.content2.title}</H2>
+            </HowItWorks>
+            <HowItWorks >
+              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content2.title}</H2>
               <H3>{content.designGoal.content3.content}</H3>
-            </HowItWorks2>
-            <HowItWorks3>
-              <H2>{content.designGoal.content3.title}</H2>
+            </HowItWorks>
+            <HowItWorks >
+              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content3.title}</H2>
               <H3>{content.designGoal.content3.content}</H3>
-            </HowItWorks3>
+            </HowItWorks>
           </HowItWorksList>
         </HowItWorksContainer>
         <DesignGoalConclusion>
           <H3>{content.designGoal.description}</H3>
         </DesignGoalConclusion>
       </DesignGoalContainer>
-      <ImageGrid>
-        <H2>USER FLOW</H2>
+      
         <Imagecontainer>
+        <div className="title">
+          <H2>USER</H2>
+          <H2 fontWeight="700px" marginLeft="1%">FLOW</H2>
+          </div>
           <Image
             src="/themoment/flow2.png"
             alt="Project 1"
@@ -292,8 +319,12 @@ const Project1: NextPage = () => {
             height={600}
           />
         </Imagecontainer>
-        <Imagecontainer margin="10%">
-          <H2>WIREFRAMES</H2>
+
+        <Imagecontainer>
+        <div className="title">
+          <H2>WIRE</H2>
+          <H2 fontWeight="700px" marginLeft="1%">FRAMES</H2>
+          </div>
           <Image
             src="/themoment/02.png"
             alt="Project 1"
@@ -301,7 +332,8 @@ const Project1: NextPage = () => {
             height={420}
           />
         </Imagecontainer>
-        <Imagecontainer>
+        <ImageBackground>
+        <Imagecontainer >
         <Image
           src="/themoment/03.png"
           alt="Project 1"
@@ -309,8 +341,13 @@ const Project1: NextPage = () => {
           height={820}
         />
       </Imagecontainer>
+      </ImageBackground>
+
       <Imagecontainer>
-        <H2>FINAL DESIGN</H2>
+      <div className="title">
+          <H2>FINAL</H2>
+          <H2 fontWeight="700px" marginLeft="1%">DESIGN</H2>
+          </div>
         <Image
           src="/themoment/04.png"
           alt="Project 1"
@@ -318,6 +355,7 @@ const Project1: NextPage = () => {
           height={820}
         />
       </Imagecontainer>
+
       <Imagecontainer>
         <Image
           src="/themoment/image16.png"
@@ -326,6 +364,7 @@ const Project1: NextPage = () => {
           height={820}
         />
         </Imagecontainer>
+
         <Imagecontainer>
         <Image
           src="/themoment/image17.png"
@@ -334,6 +373,7 @@ const Project1: NextPage = () => {
           height={820}
         />
         </Imagecontainer>
+
         <Imagecontainer>
         <Image
           src="/themoment/image18.png"
@@ -342,6 +382,7 @@ const Project1: NextPage = () => {
           height={820}
         />
         </Imagecontainer>
+
         <Imagecontainer>
         <Image
           src="/themoment/image19.png"
@@ -350,7 +391,7 @@ const Project1: NextPage = () => {
           height={820}
         />
         </Imagecontainer>
-      </ImageGrid>
+      
     </MainContainer>
   );
 };

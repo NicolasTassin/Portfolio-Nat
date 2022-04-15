@@ -4,11 +4,16 @@ import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { H1, H2, H3 } from "../styles/globalStyles";
+import { 
+  H1, 
+  H2, 
+  H3, 
+  globalStyles 
+} from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: ${globalStyles.globalGrid};
   font-family: Poppins, sans-serif;
 `;
 
