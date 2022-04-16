@@ -4,6 +4,10 @@ import styled from 'styled-components';
 
 export const globalStyles = {
     globalGrid: '10% 1fr 10%',
+    colors:{
+        green: '#E5FE9E',
+        grey: '#ADADAD'
+    }
 }
 
 

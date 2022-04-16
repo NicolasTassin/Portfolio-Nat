@@ -8,7 +8,7 @@ const StyledContainer = Styled.div`
     @media (max-width: 768px) {
       grid-template-row: 1fr 1fr;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
   }
