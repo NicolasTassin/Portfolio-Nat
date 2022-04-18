@@ -100,7 +100,7 @@ export default function Projects() {
   ];
 
   return (
-    <StyledCardContainer>
+    <StyledCardContainer id="work">
       {projects.map((project, index) => {
         return (
           <Link href={project.appLink} key={index}>

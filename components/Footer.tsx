@@ -59,12 +59,12 @@ export default function Footer() {
 
             <LiContainer>
               <ListContainer></ListContainer>
-              <a>Linktree</a>
+              <a href='https://linktr.ee/sasiya.n'>Linktree</a>
             </LiContainer>
 
             <LiContainer>
               <ListContainer></ListContainer>
-              <a>Contact</a>
+              <a href="mailto:mailto:nutt723@me.com">Contact</a>
             </LiContainer>
 
           </UlContainer>

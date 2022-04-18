@@ -1,6 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
+
 
 const StyledContainer = Styled.div`
     display: flex;
@@ -14,19 +16,14 @@ const StyledContainer = Styled.div`
   }
 `;
 
-const StyledLogoContainer = Styled.div`
-   display: flex;
-   
-    
-    
-`;
+
 const StyledList = Styled.ul`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-gap: 20px;
 justify-content: space-around;
-margin-left:0;
-padding: 0;
+
+
 @media (max-width: 768px) {
   margin-top:10%;
   grid-template-row: 1fr 1fr 1fr 1fr;
@@ -34,18 +31,18 @@ padding: 0;
 
 `;
 const StyledListElement = Styled.li`
-color: #ADADAD;
-background: transparent;
-border: none;
-padding: 8px 0px; 
-font: bold 16px 'Bitter', sans-serif;
+font: bold 16px 'Poppins', sans-serif;
+
 line-height: 2;
 position: relative;
-display: inline-block;
 cursor: pointer;
 text-decoration: none; /* remove underline if using A instead of BUTTON tag */
 overflow: hidden;
 transition: all .5s;
+a{
+  text-decoration: none;
+  color: #ADADAD;
+}
     :hover {
         color: #000;
     }
@@ -63,6 +60,7 @@ transition: all .5s;
         z-index: -1;
          transform: translate3D(-100%,0,0); /* move elements above button so they don't appear initially */
         transition: all .2s;
+        text-decoration: none;
 }
 
 
@@ -70,6 +68,7 @@ transition: all .5s;
         transform: translate3D(0,0,0);
         transition: all .5s;
         color: black;
+        text-decoration: none;
     }
 }
 `;
@@ -85,16 +84,16 @@ export default function NavBar() {
             />
         <StyledList>
           <StyledListElement>
-            <a>work</a>
+            <Link href="/about">work</Link>
           </StyledListElement>
           <StyledListElement>
             <a>about</a>
           </StyledListElement>
           <StyledListElement>
-            <a>Linktree</a>
+          <a href='https://linktr.ee/sasiya.n'>Linktree</a>
           </StyledListElement>
           <StyledListElement>
-            <a>contact</a>
+            <a href="mailto:mailto:nutt723@me.com">contact</a>
           </StyledListElement>
         </StyledList>
     </StyledContainer>

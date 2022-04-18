@@ -15,7 +15,6 @@ import {
 const MainContainer = styled.div`
   display: grid;
   font-family: Poppins, sans-serif;
-
   grid-template-columns: ${globalStyles.globalGrid}; 
   grid-template-rows: repeat(auto, 1fr);
   grid-row-gap: 20px;
