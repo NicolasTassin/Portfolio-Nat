@@ -75,10 +75,14 @@ font: 600 22px 'Poppins', sans-serif;
 line-height: 26px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(P)`
+    font-size: 16px;
+    font-weight: 300;
+    
+   
 a {
-  style-decoration: none;
-  color: #ADADAD;
+  text-decoration: none;
+  color: black;
 }
 `
 
@@ -99,11 +103,11 @@ const About: NextPage = () => {
           </Hello>
           <Description>Thanks for dropping by. I am a <b>self-taught ux/ui designer</b> with strongly background as years experienced architect with passion of digital & technology. I love connecting with and understanding people, collabration and solve challenging problems with a design.</Description>
           <Contact>Contact
-          <P><a href="mailto:mailto:nutt723@me.com">nutt723@me.com</a></P>
+          <StyledLink><a href="mailto:mailto:nutt723@me.com">nutt723@me.com</a></StyledLink>
           </Contact>
           <Links>Link
-          <P><StyledLink href="https://linktr.ee/sasiya.n"><a>Resume</a></StyledLink></P>
-          <P><StyledLink href="https://linktr.ee/sasiya.n">Linkedin</StyledLink></P>
+          <StyledLink ><a href="https://linktr.ee/sasiya.n">Resume</a></StyledLink>
+          <StyledLink ><a href="https://linktr.ee/sasiya.n">Linkedin</a></StyledLink>
           </Links>
         </ContentRight>
       </AboutContainer>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
@@ -60,14 +61,18 @@ const Button = styled.button`
   background-color: white;
   border-radius: 4px;
   height: 37px;
-  top: 444px;
   filter: drop-shadow(4px 4px 0px #000000);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.02em;
-  text-align: left;
+  
+  a{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+  }
 `;
 const OverviewContainer = styled.div`
   display: flex;
@@ -220,16 +225,17 @@ const Project1: NextPage = () => {
 
         <StyledTitleContainer>
           <Image
-            src="/boar/iphonebg.png"
+            src="/themoment/01.png"
             alt="Project 1"
-            width={1800}
-            height={1200}
+            width={645}
+            height={640}
+            layout="responsive"
           />
           <TitleContainer>
             <StyledTitle>{content.header.projectDescription}</StyledTitle>
             <Name>{content.header.title}</Name>
             <Description>{content.header.description}</Description>
-            <Button>VIEW PROTOTYPE</Button>
+            <Button><a href="https://www.figma.com/proto/iwisCXdbkfRNpHMnKwS9zz/The-moment?page-id=0%3A1&node-id=73%3A65&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=74%3A65">VIEW PROTOTYPE</a></Button>
           </TitleContainer>
         </StyledTitleContainer>
       </StyledAppContainer>
@@ -320,6 +326,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1067}
           height={600}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -335,6 +342,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={977}
           height={420}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -345,6 +353,7 @@ const Project1: NextPage = () => {
             alt="Project 1"
             width={1090}
             height={600}
+            layout="responsive"
           />
         </Imagecontainer>
       </ImageBackground>
@@ -361,6 +370,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1090}
           height={820}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -370,6 +380,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1090}
           height={820}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -379,6 +390,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1090}
           height={820}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -388,6 +400,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1090}
           height={820}
+          layout="responsive"
         />
       </Imagecontainer>
 
@@ -397,6 +410,7 @@ const Project1: NextPage = () => {
           alt="Project 1"
           width={1090}
           height={820}
+          layout="responsive"
         />
       </Imagecontainer>
     </MainContainer>

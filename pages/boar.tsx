@@ -26,6 +26,7 @@ const StyledAppContainer = styled.div`
 const StyledTitleContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -80,14 +81,18 @@ const Button = styled.button`
   background-color: white;
   border-radius: 4px;
   height: 37px;
-  top: 444px;
   filter: drop-shadow(4px 4px 0px #000000);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.02em;
-  text-align: left;
+  a{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+  }
+  
 `;
 const AboutContainer = styled.div`
   display: grid;
@@ -127,12 +132,15 @@ const Project1: NextPage = () => {
         <NavBar />
 
         <StyledTitleContainer>
+          <ImageContainer margin="0 0 0 -10%">
           <Image
             src="/boar/iphonebg.png"
             alt="Project 1"
             width={1400}
             height={850}
+            
           />
+          </ImageContainer>
           <TitleContainer>
             <StyledTitle>UX/UI Application case study</StyledTitle>
             <Name>‘BOAR’</Name>
@@ -140,7 +148,7 @@ const Project1: NextPage = () => {
               All in one service{" "}
               <b>Booking & Ordering App for Restaurant business. </b>
             </Description>
-            <Button>VIEW PROTOTYPE</Button>
+            <Button><a href="https://www.figma.com/proto/g1Wnv2OnwpgYfM9pK2nyfN/Restaurant-cafe-ordering-app?node-id=103%3A1050&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=163%3A1050">VIEW PROTOTYPE</a></Button>
           </TitleContainer>
         </StyledTitleContainer>
       </StyledAppContainer>
