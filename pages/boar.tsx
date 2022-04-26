@@ -13,7 +13,7 @@ import {
 
 const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: ${globalStyles.globalGrid};
+  grid-template-columns: ${globalStyles.gridTemplateColumns};
   font-family: Poppins, sans-serif;
 `;
 
@@ -111,6 +111,9 @@ const ImageGrid = styled.div`
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 20px;
 `;
+const ImageContainer = styled.div<{margin?: string}>`
+  margin: ${(props) => props.margin || "0"};
+`
 const Project1: NextPage = () => {
   return (
     <MainContainer>
@@ -203,21 +206,23 @@ const Project1: NextPage = () => {
             <H1>
               VISUAL<b> ELEMENT</b>
             </H1>
+            <ImageContainer >
             <Image
               src="/boar/visualelement.svg"
               alt="Project 1"
               width={511}
               height={285}
             />
+            </ImageContainer>
           </Content>
-          
+          <ImageContainer margin="0 0 0 20%">
           <Image
             src="/boar/iphone02-bg.png"
             alt="Project 1"
             width={476}
             height={414}
           />
-       
+          </ImageContainer>
         </DoubleContent>
         <Styled3RowContainer>
           <StyledContentRowContainer gridColumn={1}>
@@ -247,29 +252,35 @@ const Project1: NextPage = () => {
             FINAL<b> DESIGN</b>
           </H1>
           <ImageGrid>
+            <ImageContainer>
             <Image
               src="/boar/01.png"
               alt="Project 1"
-              width={1090}
-              height={820}
+              width={1071}
+              height={819}
+              layout="responsive"
             />
+            </ImageContainer>
             <Image
               src="/boar/02.png"
               alt="Project 1"
               width={1090}
               height={820}
+              layout="responsive"
             />
             <Image
               src="/boar/Dribble show 92.png"
               alt="Project 1"
               width={1090}
               height={820}
+              layout="responsive"
             />
             <Image
               src="/boar/Dribble show 94.png"
               alt="Project 1"
               width={1090}
               height={820}
+              layout="responsive"
             />
           </ImageGrid>
         </StyledContainer>

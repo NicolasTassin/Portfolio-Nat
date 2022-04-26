@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 
 export const globalStyles = {
-    globalGrid: '10% 1fr 10%',
+    gridTemplateColumns: '10% 1fr 10%',
+    margin: '0 10%',
     colors:{
         green: '#E5FE9E',
         grey: '#ADADAD'

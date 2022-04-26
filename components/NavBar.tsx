@@ -2,11 +2,14 @@ import React from "react";
 import Styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import { globalStyles } from "../styles/globalStyles";
 
 
 const StyledContainer = Styled.div`
     display: flex;
     justify-content: space-between;
+    margin: ${globalStyles.margin};
+    grid-template-columns: ${globalStyles.gridTemplateColumns}; };
     @media (max-width: 768px) {
       grid-template-row: 1fr 1fr;
   }
@@ -87,7 +90,7 @@ export default function NavBar() {
             <Link href="/about">work</Link>
           </StyledListElement>
           <StyledListElement>
-            <a>about</a>
+            <Link href="/about">about</Link>
           </StyledListElement>
           <StyledListElement>
           <a href='https://linktr.ee/sasiya.n'>Linktree</a>

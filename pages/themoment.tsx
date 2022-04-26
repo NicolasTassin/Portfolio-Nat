@@ -4,18 +4,12 @@ import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { 
-  H1, 
-  H2, 
-  H3,
-  P, 
-  globalStyles 
-} from "../styles/globalStyles";
+import { H1, H2, H3, P, globalStyles } from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   display: grid;
   font-family: Poppins, sans-serif;
-  grid-template-columns: ${globalStyles.globalGrid}; 
+  grid-template-columns: ${globalStyles.gridTemplateColumns};
   grid-template-rows: repeat(auto, 1fr);
   grid-row-gap: 20px;
 `;
@@ -162,16 +156,15 @@ const DesignGoalTitle = styled.div`
   grid-column: 1;
   grid-row: 1;
   div {
-    display: flex;  
+    display: flex;
   }
 `;
 const HowItWorksContainer = styled.div`
   display: grid;
   grid-row: 2;
-  .title{
-      display: flex; 
+  .title {
+    display: flex;
   }
-  
 `;
 const HowItWorksList = styled.div`
   display: grid;
@@ -181,14 +174,13 @@ const HowItWorksList = styled.div`
   grid-column-gap: 3%;
 `;
 const HowItWorks = styled.div`
-  width: 90%
+  width: 90%;
 `;
 
 const DesignGoalConclusion = styled.div`
   grid-column: 1;
   grid-row: 3;
 `;
-
 
 const Imagecontainer = styled.div<{
   gridColumn?: string;
@@ -198,19 +190,19 @@ const Imagecontainer = styled.div<{
   display: grid;
   grid-column: ${(props) => props.gridColumn || "2 / 3"};
   width: ${(props) => props.width || "100%"};
-  .title{
-    display: flex; 
-}
+  .title {
+    display: flex;
+  }
 `;
 const ImageBackground = styled.div<{
   gridColumn?: string;
   width?: string;
   margin?: string;
 }>`
-  background-color: #2FC5B4;
+  background-color: #2fc5b4;
   grid-column: ${(props) => props.gridColumn || "1 / 4"};
   display: grid;
-  grid-template-columns: ${globalStyles.globalGrid};
+  grid-template-columns: ${globalStyles.gridTemplateColumns};
   width: ${(props) => props.width || "100%"};
 `;
 
@@ -244,7 +236,7 @@ const Project1: NextPage = () => {
 
       <OverviewContainer>
         <Content>
-          <H3 fontWeight="700px" >OVERVIEW</H3>
+          <H3 fontWeight="700px">OVERVIEW</H3>
           <P>{content.overview.content}</P>
         </Content>
 
@@ -276,27 +268,37 @@ const Project1: NextPage = () => {
       <DesignGoalContainer>
         <DesignGoalTitle>
           <div>
-          <H2>DESIGN </H2>
-          <H2 fontWeight="700px" marginLeft="1%">GOAL</H2>
+            <H2>DESIGN </H2>
+            <H2 fontWeight="700px" marginLeft="1%">
+              GOAL
+            </H2>
           </div>
           <H3>{content.designGoal.description}</H3>
         </DesignGoalTitle>
         <HowItWorksContainer>
           <div className="title">
-          <H2>HOW IT</H2>
-          <H2 fontWeight="700px" marginLeft="1%">WORKS</H2>
+            <H2>HOW IT</H2>
+            <H2 fontWeight="700px" marginLeft="1%">
+              WORKS
+            </H2>
           </div>
           <HowItWorksList>
             <HowItWorks>
-              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content1.title}</H2>
+              <H2 fontWeight="700px" fontSize="24px">
+                {content.designGoal.content1.title}
+              </H2>
               <H3>{content.designGoal.content1.content}</H3>
             </HowItWorks>
-            <HowItWorks >
-              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content2.title}</H2>
+            <HowItWorks>
+              <H2 fontWeight="700px" fontSize="24px">
+                {content.designGoal.content2.title}
+              </H2>
               <H3>{content.designGoal.content3.content}</H3>
             </HowItWorks>
-            <HowItWorks >
-              <H2 fontWeight="700px" fontSize="24px">{content.designGoal.content3.title}</H2>
+            <HowItWorks>
+              <H2 fontWeight="700px" fontSize="24px">
+                {content.designGoal.content3.title}
+              </H2>
               <H3>{content.designGoal.content3.content}</H3>
             </HowItWorks>
           </HowItWorksList>
@@ -305,48 +307,55 @@ const Project1: NextPage = () => {
           <H3>{content.designGoal.description}</H3>
         </DesignGoalConclusion>
       </DesignGoalContainer>
-      
-        <Imagecontainer>
+
+      <Imagecontainer>
         <div className="title">
           <H2>USER</H2>
-          <H2 fontWeight="700px" marginLeft="1%">FLOW</H2>
-          </div>
+          <H2 fontWeight="700px" marginLeft="1%">
+            FLOW
+          </H2>
+        </div>
+        <Image
+          src="/themoment/flow2.png"
+          alt="Project 1"
+          width={1067}
+          height={600}
+        />
+      </Imagecontainer>
+
+      <Imagecontainer>
+        <div className="title">
+          <H2>WIRE</H2>
+          <H2 fontWeight="700px" marginLeft="1%">
+            FRAMES
+          </H2>
+        </div>
+        <Image
+          src="/themoment/02.png"
+          alt="Project 1"
+          width={977}
+          height={420}
+        />
+      </Imagecontainer>
+
+      <ImageBackground>
+        <Imagecontainer>
           <Image
-            src="/themoment/flow2.png"
+            src="/themoment/03.png"
             alt="Project 1"
-            width={1067}
+            width={1090}
             height={600}
           />
         </Imagecontainer>
-
-        <Imagecontainer>
-        <div className="title">
-          <H2>WIRE</H2>
-          <H2 fontWeight="700px" marginLeft="1%">FRAMES</H2>
-          </div>
-          <Image
-            src="/themoment/02.png"
-            alt="Project 1"
-            width={977}
-            height={420}
-          />
-        </Imagecontainer>
-        <ImageBackground>
-        <Imagecontainer >
-        <Image
-          src="/themoment/03.png"
-          alt="Project 1"
-          width={1090}
-          height={820}
-        />
-      </Imagecontainer>
       </ImageBackground>
 
       <Imagecontainer>
-      <div className="title">
+        <div className="title">
           <H2>FINAL</H2>
-          <H2 fontWeight="700px" marginLeft="1%">DESIGN</H2>
-          </div>
+          <H2 fontWeight="700px" marginLeft="1%">
+            DESIGN
+          </H2>
+        </div>
         <Image
           src="/themoment/04.png"
           alt="Project 1"
@@ -362,35 +371,34 @@ const Project1: NextPage = () => {
           width={1090}
           height={820}
         />
-        </Imagecontainer>
+      </Imagecontainer>
 
-        <Imagecontainer>
+      <Imagecontainer>
         <Image
           src="/themoment/image17.png"
           alt="Project 1"
           width={1090}
           height={820}
         />
-        </Imagecontainer>
+      </Imagecontainer>
 
-        <Imagecontainer>
+      <Imagecontainer>
         <Image
           src="/themoment/image18.png"
           alt="Project 1"
           width={1090}
           height={820}
         />
-        </Imagecontainer>
+      </Imagecontainer>
 
-        <Imagecontainer>
+      <Imagecontainer>
         <Image
           src="/themoment/image19.png"
           alt="Project 1"
           width={1090}
           height={820}
         />
-        </Imagecontainer>
-      
+      </Imagecontainer>
     </MainContainer>
   );
 };

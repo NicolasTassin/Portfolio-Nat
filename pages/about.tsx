@@ -4,115 +4,110 @@ import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 import { H1, H2, H3, P, globalStyles } from "../styles/globalStyles";
 
 const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: 10% 1fr 10%;
   font-family: "Poppins", sans-serif;
-`;
-const AppContainer = styled.div`
-  grid-column: 2;
+  height: 100vh;
 `;
 
-const Green = styled.div`
-  background-color: red;
-  grid-column-start: 2;
-
-`;
-const Divider = styled.div`
+const AboutContainer = styled.div`
   display: grid;
-  grid-column: 2/4;
-  grid-template-columns: 1fr 1fr;
-  margin: calc(100vh - 75%) 0;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: repeat(10, 1fr);
+  height: calc(100vh - 20%);
 `;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  
- 
+const ContentLeft = styled.div`
+  grid-column: 2;
+  grid-row: 5;
 `;
 
 const Phonetic = styled.div`
-  grid-row: 4;
-  grid-column: 1 / 4;
-  font-family: Poppins;
-  font-size: 22px;
+  font-weight: 300;
   font-style: italic;
-  font-weight: 400;
+  font-size: 20px;
   line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #ADADAD;
-
 `;
 
-const DetailsContainer = styled.div`
+const ContentRight = styled.div`
+  background-color: #e5fe9e;
+  grid-column: 3 / 5;
+  grid-row: 4 / 8;
+  padding-left:40px;
   position: relative;
   
+`;
+const Hello = styled.div`
+  display-grid;
+  grid-template-rows: 1fr 1fr;
+  
+
+  h1 {
+    position: absolute;
+    top: -45px;
+    font: 300 50px 'Poppins', sans-serif;
+    line-height: 26px;
+  }
+  
   
 `;
 
-const StyledH1 = styled(H1)`
-  grid-template-rows: 1fr 1fr;  
-  
+const WhiteSpace = styled.div`
+  grid-row: 2;background-color: white;
+  grid-row: 1 ;
+  height: 100%;
+  width: 100%;
 `;
-const GreenBackground = styled.div`
-  background-color: #e5fe9e;
-  height:calc(100%-100px);
-  width:100%;
-  top:100px;
-  grid-row: 2;
-  z-index: -1;
-  
+const Description = styled.div`
+margin: 5% auto 5%;
+font: 300 18px 'Poppins', sans-serif;
+line-height: 26px;
 `;
-const DetailsContent = styled.div``;
-const DetailsContact = styled.div``;
-const DetailsLink = styled.div``;
+const Contact = styled.div`
+  font: 600 22px 'Poppins', sans-serif;
+  line-height: 26px;
+`;
+const Links = styled.div`
+font: 600 22px 'Poppins', sans-serif;
+line-height: 26px;
+`;
+
+const StyledLink = styled(Link)`
+a {
+  style-decoration: none;
+  color: #ADADAD;
+}
+`
 
 const About: NextPage = () => {
   return (
     <MainContainer>
-      <Green></Green>
-      <AppContainer>
-      
-        <NavBar />
-        <Divider>
-          <NameContainer>
-            <Image src="/about/nameAbout.png" width={388} height={150}></Image>
-            <Phonetic>/sa-see-yaa tape-pie-toon/</Phonetic>
-          </NameContainer>
+      <NavBar />
+      <AboutContainer>
+        <ContentLeft>
+          <Image src="/about/nameAbout.png" height={150} width={388}></Image>
+          <Phonetic> /sa-see-yaa  tape-pie-toon/</Phonetic>
+        </ContentLeft>
 
-          <DetailsContainer>
-           
-          <GreenBackground>
-                <StyledH1>Hello!</StyledH1>
-              
-           
-            <DetailsContent>
-              Thanks for dropping by. I am a self-taught ux/ui designer with
-              strongly background as years experienced architect with passion of
-              digital & technology. I love connecting with and understanding
-              people, collabration and solve challenging problems with a design.
-            </DetailsContent>
-            <DetailsContact>
-              <H3>Contact</H3>
-              <P>nutt723@me.com</P>
-            </DetailsContact>
-
-            <DetailsLink>
-              <H3>Link</H3>
-              <P>Resume</P>
-              <P>Linkedin</P>
-            </DetailsLink>
-            </GreenBackground>
-          </DetailsContainer>
-        </Divider>
-        <Footer />
-      </AppContainer>
+        <ContentRight>
+          <Hello>
+            <WhiteSpace className="whitespace"></WhiteSpace>
+            <H1>Hello!</H1>
+          </Hello>
+          <Description>Thanks for dropping by. I am a <b>self-taught ux/ui designer</b> with strongly background as years experienced architect with passion of digital & technology. I love connecting with and understanding people, collabration and solve challenging problems with a design.</Description>
+          <Contact>Contact
+          <P><a href="mailto:mailto:nutt723@me.com">nutt723@me.com</a></P>
+          </Contact>
+          <Links>Link
+          <P><StyledLink href="https://linktr.ee/sasiya.n"><a>Resume</a></StyledLink></P>
+          <P><StyledLink href="https://linktr.ee/sasiya.n">Linkedin</StyledLink></P>
+          </Links>
+        </ContentRight>
+      </AboutContainer>
+      <Footer />
     </MainContainer>
   );
 };
