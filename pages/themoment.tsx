@@ -26,7 +26,7 @@ const StyledTitleContainer = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -84,15 +84,35 @@ const OverviewContainer = styled.div`
 const Threeseparator = styled.div`
   display: grid;
   grid-template-columns: 10% 20% 20% 10%;
+  @media (max-width: 768px) {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Column1 = styled.div`
   grid-column: 2;
+  @media (max-width: 768px) {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Column2 = styled.div`
   grid-column: 3;
+  @media (max-width: 768px) {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Column3 = styled.div`
   grid-column: 4;
+  @media (max-width: 768px) {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Content = styled.div<{ gridColumn?: string }>`
@@ -170,16 +190,27 @@ const HowItWorksContainer = styled.div`
   .title {
     display: flex;
   }
+  @media (max-width: 768px) {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 `;
 const HowItWorksList = styled.div`
-  display: grid;
-  grid-row: 2 / 4;
-  grid-template-columns: repeat(3, 25%);
-  grid-template-row: 1fr 1fr;
+  display: flex;
   grid-column-gap: 3%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const HowItWorks = styled.div`
-  width: 90%;
+@media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 `;
 
 const DesignGoalConclusion = styled.div`

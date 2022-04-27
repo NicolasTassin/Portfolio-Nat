@@ -75,7 +75,10 @@ const Name = styled.div`
   letter-spacing: 0.05em;
 `;
 
-const Description = styled(H3)``;
+const Description = styled(H3)`
+  text-align: center;
+  margin: 0;
+`;
 
 const Button = styled.button`
   background-color: white;
