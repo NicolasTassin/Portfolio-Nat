@@ -8,7 +8,7 @@ import { globalStyles } from "../styles/globalStyles";
 const StyledContainer = Styled.div`
     display: flex;
     justify-content: space-between;
-    margin: ${globalStyles.margin};
+    //margin: ${globalStyles.margin};
     grid-template-columns: ${globalStyles.gridTemplateColumns}; };
     @media (max-width: 768px) {
       grid-template-row: 1fr 1fr;

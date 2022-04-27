@@ -17,9 +17,8 @@ const StyledCardContainer = styled.a`
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-image: url("/images/background.jpg");
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   position: relative;
   h2,
@@ -40,26 +39,40 @@ const StyledCard = styled.div`
 
 const StyledHoverContainer = styled.div`
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+
 `;
 const StyledProjectTitle = styled(H2)`
-  display: flex;
-  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+
 `;
 
 const StyledProjectName = styled(H2)`
-  top: 50%;
+  margin:0;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  
 `;
 
 const StyledUnderliner = styled.div`
-  background-color: #e5fe9e;
-  height: 20px;
+background-color: #e5fe9e;
+width: 100%;
+height: 40%;
+position: absolute;
+bottom: 3px;
+z-index: -1;
+  
+  
 `;
 const StyledDescription = styled(P)`
-  display: flex;
-  justify-content: center;
+  
 `;
 
 export default function Projects() {
@@ -67,7 +80,7 @@ export default function Projects() {
     {
       title: "Application re-design",
       name: "The Moment",
-      description: "Dating app UI Design",
+      description: "Dating App UI Design",
       image: "/homepage/image11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/themoment",
@@ -76,7 +89,7 @@ export default function Projects() {
       title: "Application case study",
       name: "BOAR",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
+        "Restaurant business supporting app",
       image: "/homepage/image10.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/boar",
@@ -85,15 +98,16 @@ export default function Projects() {
       title: "UI design daily challenges",
       name: "DAILY UI",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
+        "See more on bēhance",
       image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/dailyui",
     },
     {
-      title: "Smart Contract Analyst",
+      title: "Project Development",
+      name:"Smart contract Analyst",
       description: "Project in progress",
-      image: "/homepage/rectangle9.png",
+      image: "/homepage/inProgress.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/smartcontract",
     },
@@ -108,9 +122,7 @@ export default function Projects() {
               <Image src={project.image} width="700" height="400" alt="" />
               <StyledHoverContainer className="show">
                 <StyledProjectTitle>{project.title}</StyledProjectTitle>
-                <StyledProjectName>
-                  <StyledUnderliner>{project.name}</StyledUnderliner>
-                </StyledProjectName>
+                <StyledProjectName>{project.name}<StyledUnderliner></StyledUnderliner></StyledProjectName>
                 <StyledDescription>{project.description}</StyledDescription>
               </StyledHoverContainer>
             </StyledCard>
