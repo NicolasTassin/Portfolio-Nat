@@ -6,8 +6,8 @@ const FooterContainer = Styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
-    //margin: ${globalStyles.margin};
+    
+    margin: 5% auto;
 
     font-style: normal;
     font-weight: 300;
@@ -15,14 +15,19 @@ const FooterContainer = Styled.div`
     line-height: 21px;
 
 
-letter-spacing: 0.05em;
+    letter-spacing: 0.05em;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
     `;
 
 const UlContainer = Styled.ul`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    
     position: relative;
+    @media (max-width: 768px) {
+      padding:0;
+    }
     
     
 `;
@@ -51,7 +56,7 @@ div{
   border-radius: 50%;
 }
 
-`
+`;
 
 const ListContainer = Styled.div`
     background-color: ${globalStyles.colors.green};
@@ -71,26 +76,28 @@ export default function Footer() {
     <footer>
       <FooterContainer>
         <p>nutt@me.com</p>
-        <div>
+        
           <UlContainer>
-            
             <LiContainer>
               <ListContainer></ListContainer>
-              <a href='https://www.linkedin.com/in/sasiya/'>Linkedin</a>
+              <a href="https://www.linkedin.com/in/sasiya/">Linkedin</a>
             </LiContainer>
-              <Point className="point"><div></div></Point>
+            <Point className="point">
+              <div></div>
+            </Point>
             <LiContainer>
               <ListContainer></ListContainer>
-              <a href='https://linktr.ee/sasiya.n'>Linktree</a>
+              <a href="https://linktr.ee/sasiya.n">Linktree</a>
             </LiContainer>
-            <Point className="point"><div></div></Point>
+            <Point className="point">
+              <div></div>
+            </Point>
             <LiContainer>
               <ListContainer></ListContainer>
               <a href="mailto:mailto:nutt723@me.com">Contact</a>
             </LiContainer>
-
           </UlContainer>
-        </div>
+        
       </FooterContainer>
     </footer>
   );

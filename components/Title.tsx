@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
+import { StyledButton } from "../styles/globalStyles";
 
 const StyledContainer = Styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px;
+    //height: 450px;
     flex-direction: column;
+    margin: 10% auto;
     
 `;
 
@@ -43,23 +45,7 @@ const StyledAnimatedH3 = Styled(StyledH3)`
     }
     `;
 
-const StyledButton = Styled.button`
-    width: 115px;
-    height: 35px;
-    border-radius: 10px;
-    background-color: white;
-    border: 1px solid #7C7C7C;
-    margin: 20px auto;
-    transition: all 300ms ease;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    :hover {
-        background-color: #E5FE9E;
-    }
-`;
 
 export default function Title() {
   const [index, setIndex] = useState(0);
@@ -114,7 +100,7 @@ export default function Title() {
       <StyledAnimatedH3>{`${words[index].substring(0, subIndex)}`}</StyledAnimatedH3>
       </StyledAnimationContainer>
       <StyledH3>{subtitle2}</StyledH3>
-      <StyledButton>READ MORE</StyledButton>
+      <StyledButton margin=' 5% 0 10% 0'><a>READ MORE</a></StyledButton>
     </StyledContainer>
     
   );

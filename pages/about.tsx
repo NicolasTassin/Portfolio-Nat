@@ -10,14 +10,14 @@ import { H1, H2, H3, P, globalStyles } from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  
 `;
 
 const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
-  grid-template-rows: repeat(10, 1fr);
-  height: calc(100vh - 20%);
+  grid-template-rows: repeat(auto, 1fr);
+  margin: 10% 0;
 `;
 const ContentLeft = styled.div`
   grid-column: 2;
@@ -85,11 +85,16 @@ a {
   color: black;
 }
 `
+const NavContainer = styled.div`
+  margin: ${globalStyles.margin};
+`
 
 const About: NextPage = () => {
   return (
     <MainContainer>
+      <NavContainer>
       <NavBar />
+      </NavContainer>
       <AboutContainer>
         <ContentLeft>
           <Image src="/about/nameAbout.png" height={150} width={388}></Image>
@@ -111,7 +116,9 @@ const About: NextPage = () => {
           </Links>
         </ContentRight>
       </AboutContainer>
+      <NavContainer>
       <Footer />
+      </NavContainer>
     </MainContainer>
   );
 };

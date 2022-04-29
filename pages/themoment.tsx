@@ -5,7 +5,7 @@ import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { H1, H2, H3, P, globalStyles } from "../styles/globalStyles";
+import { StyledButton, H2, H3, P, globalStyles } from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   display: grid;
@@ -55,25 +55,6 @@ const Name = styled.div`
   letter-spacing: 0.05em;
 `;
 
-const Description = styled(H3)``;
-
-const Button = styled.button`
-  background-color: white;
-  border-radius: 4px;
-  height: 37px;
-  filter: drop-shadow(4px 4px 0px #000000);
-  
-  a{
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    text-decoration: none;
-    color: black;
-  }
-`;
 const OverviewContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -265,8 +246,8 @@ const Project1: NextPage = () => {
           <TitleContainer>
             <StyledTitle>{content.header.projectDescription}</StyledTitle>
             <Name>{content.header.title}</Name>
-            <Description>{content.header.description}</Description>
-            <Button><a href="https://www.figma.com/proto/iwisCXdbkfRNpHMnKwS9zz/The-moment?page-id=0%3A1&node-id=73%3A65&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=74%3A65">VIEW PROTOTYPE</a></Button>
+            <H3>{content.header.description}</H3>
+            <StyledButton><a href="https://www.figma.com/proto/iwisCXdbkfRNpHMnKwS9zz/The-moment?page-id=0%3A1&node-id=73%3A65&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=74%3A65">VIEW PROTOTYPE</a></StyledButton>
           </TitleContainer>
         </StyledTitleContainer>
       </StyledAppContainer>
