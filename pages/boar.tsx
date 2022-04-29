@@ -4,12 +4,7 @@ import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { 
-  H1, 
-  H2, 
-  H3, 
-  globalStyles 
-} from "../styles/globalStyles";
+import { H1, H2, H3, globalStyles } from "../styles/globalStyles";
 
 const MainContainer = styled.div`
   display: grid;
@@ -85,7 +80,7 @@ const Button = styled.button`
   border-radius: 4px;
   height: 37px;
   filter: drop-shadow(4px 4px 0px #000000);
-  a{
+  a {
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -95,7 +90,6 @@ const Button = styled.button`
     text-decoration: none;
     color: black;
   }
-  
 `;
 const AboutContainer = styled.div`
   display: grid;
@@ -109,18 +103,23 @@ const Content = styled.div<{ gridColumn?: string }>`
 `;
 
 const DoubleContent = styled.div`
-    display: grid;
-    grid-column: 1 / 4;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10%;
+  display: grid;
+  grid-column: 1 / 4;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10%;
 `;
 const ImageGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 20px;
 `;
-const ImageContainer = styled.div<{margin?: string}>`
+const ImageContainer = styled.div<{ margin?: string }>`
   margin: ${(props) => props.margin || "0"};
+  position: relative;
+`;
+const BoarContainer = styled.div`
+  position: absolute;
+  left:10%;
 `
 const Project1: NextPage = () => {
   return (
@@ -136,13 +135,20 @@ const Project1: NextPage = () => {
 
         <StyledTitleContainer>
           <ImageContainer margin="0 0 0 -10%">
-          <Image
-            src="/boar/iphonebg.png"
-            alt="Project 1"
-            width={1400}
-            height={850}
-            
-          />
+            <BoarContainer>
+              <Image
+                src="/boar/boarboarboar.png"
+                width={215}
+                height={240}
+                
+              />
+            </BoarContainer>
+            <Image
+              src="/boar/iphonebg.png"
+              alt="Project 1"
+              width={1400}
+              height={850}
+            />
           </ImageContainer>
           <TitleContainer>
             <StyledTitle>UX/UI Application case study</StyledTitle>
@@ -151,7 +157,11 @@ const Project1: NextPage = () => {
               All in one service{" "}
               <b>Booking & Ordering App for Restaurant business. </b>
             </Description>
-            <Button><a href="https://www.figma.com/proto/g1Wnv2OnwpgYfM9pK2nyfN/Restaurant-cafe-ordering-app?node-id=103%3A1050&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=163%3A1050">VIEW PROTOTYPE</a></Button>
+            <Button>
+              <a href="https://www.figma.com/proto/g1Wnv2OnwpgYfM9pK2nyfN/Restaurant-cafe-ordering-app?node-id=103%3A1050&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=163%3A1050">
+                VIEW PROTOTYPE
+              </a>
+            </Button>
           </TitleContainer>
         </StyledTitleContainer>
       </StyledAppContainer>
@@ -217,22 +227,22 @@ const Project1: NextPage = () => {
             <H1>
               VISUAL<b> ELEMENT</b>
             </H1>
-            <ImageContainer >
-            <Image
-              src="/boar/visualelement.svg"
-              alt="Project 1"
-              width={511}
-              height={285}
-            />
+            <ImageContainer>
+              <Image
+                src="/boar/visualelement.svg"
+                alt="Project 1"
+                width={511}
+                height={285}
+              />
             </ImageContainer>
           </Content>
           <ImageContainer margin="0 0 0 20%">
-          <Image
-            src="/boar/iphone02-bg.png"
-            alt="Project 1"
-            width={476}
-            height={414}
-          />
+            <Image
+              src="/boar/iphone02-bg.png"
+              alt="Project 1"
+              width={476}
+              height={414}
+            />
           </ImageContainer>
         </DoubleContent>
         <Styled3RowContainer>
@@ -264,13 +274,13 @@ const Project1: NextPage = () => {
           </H1>
           <ImageGrid>
             <ImageContainer>
-            <Image
-              src="/boar/01.png"
-              alt="Project 1"
-              width={1071}
-              height={819}
-              layout="responsive"
-            />
+              <Image
+                src="/boar/01.png"
+                alt="Project 1"
+                width={1071}
+                height={819}
+                layout="responsive"
+              />
             </ImageContainer>
             <Image
               src="/boar/02.png"
