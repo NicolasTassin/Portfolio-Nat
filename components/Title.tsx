@@ -8,7 +8,7 @@ const StyledContainer = Styled.div`
     align-items: center;
     //height: 450px;
     flex-direction: column;
-    margin: 10% auto;
+    margin: 8% auto;
     
 `;
 

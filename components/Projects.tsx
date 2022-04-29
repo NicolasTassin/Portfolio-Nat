@@ -14,7 +14,7 @@ const StyledCardContainer = styled.a`
   }
 `;
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<{ opacity: number}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,16 +23,16 @@ const StyledCard = styled.div`
   position: relative;
   h2,
   p {
-    opacity: 0;
+    opacity: ${(props) => props.opacity || 0};
   }
 
   :hover {
     img {
-      opacity: 0.5;
+      opacity: ${(props) => props.opacity || 0.5};
     }
     h2,
     p {
-      opacity: 1;
+      opacity: ${(props) => props.opacity || 1};
     }
   }
 `;
@@ -100,14 +100,14 @@ export default function Projects() {
       description:
         "See more on bēhance",
       image: "/homepage/rectangle9.png",
-      link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
-      appLink: "/dailyui",
+      link: "https://www.behance.net/gallery/139389089/DailyUI-Challenge-001-007",
+      appLink: "https://www.behance.net/gallery/139389089/DailyUI-Challenge-001-007",
     },
     {
-      title: "Project Development",
-      name:"Smart contract Analyst",
+      title: "COCO",
+      name:"Community Collaboration Project",
       description: "Project in progress",
-      image: "/homepage/inProgress.png",
+      image: "/homepage/Rectangle11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/smartcontract",
     },
@@ -117,11 +117,11 @@ export default function Projects() {
     <StyledCardContainer id="work">
       {projects.map((project, index) => {
         return (
-          <Link href={project.appLink} key={index}>
-            <StyledCard key={index}>
+          <Link href={project.appLink} key={index} passHref>
+            <StyledCard key={index} opacity={ project.title == "Project Development" ? 1 : 0}>
               <Image src={project.image} width="700" height="400" alt="" />
               <StyledHoverContainer className="show">
-                <StyledProjectTitle>{project.title}</StyledProjectTitle>
+                <StyledProjectTitle >{project.title}</StyledProjectTitle>
                 <StyledProjectName>{project.name}<StyledUnderliner></StyledUnderliner></StyledProjectName>
                 <StyledDescription>{project.description}</StyledDescription>
               </StyledHoverContainer>

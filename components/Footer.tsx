@@ -7,7 +7,7 @@ const FooterContainer = Styled.div`
     justify-content: space-between;
     align-items: center;
     
-    margin: 5% auto;
+    margin-top: 5%;
 
     font-style: normal;
     font-weight: 300;
