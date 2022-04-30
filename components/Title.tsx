@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
 import { StyledButton } from "../styles/globalStyles";
+import Link from "next/link";
 
 const StyledContainer = Styled.div`
     display: flex;
@@ -101,9 +102,11 @@ export default function Title() {
         )}`}</StyledAnimatedH3>
       </StyledAnimationContainer>
       <StyledH3>{subtitle2}</StyledH3>
-      <StyledButton margin=" 5% 0 10% 0">
+      <Link href="/about" passHref>
+      <StyledButton margin=" 5% 0 10% 0" >
         <a>READ MORE</a>
       </StyledButton>
+      </Link>
     </StyledContainer>
   );
 }

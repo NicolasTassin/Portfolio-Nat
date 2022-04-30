@@ -65,6 +65,9 @@ export const StyledButton = styled.button<{margin?: string}>`
   filter: drop-shadow(4px 4px 0px #000000);
   margin: ${(props) => props.margin};
   padding: 0 15px;
+  :hover{
+      cursor: pointer;
+  }
 
   a {
     font-size: 14px;
