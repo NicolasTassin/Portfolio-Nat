@@ -8,6 +8,7 @@ const FooterContainer = Styled.div`
     align-items: center;
     
     margin-top: 5%;
+    
 
     font-style: normal;
     font-weight: 300;
@@ -22,9 +23,10 @@ const FooterContainer = Styled.div`
     `;
 
 const UlContainer = Styled.ul`
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
     @media (max-width: 768px) {
       padding:0;
     }
@@ -45,13 +47,11 @@ const LiContainer = Styled.li`
     }
 `;
 const Point = Styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
+
 
 div{
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background-color: black;
   border-radius: 50%;
 }

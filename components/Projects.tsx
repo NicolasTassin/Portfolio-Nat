@@ -21,20 +21,20 @@ const StyledCard = styled.div<{ opacity: number}>`
   justify-content: center;
   cursor: pointer;
   position: relative;
-  h2,
-  p {
-    opacity: ${(props) => props.opacity || 0};
-  }
+  // h2,
+  // p {
+  //   opacity: ${(props) => props.opacity || 0};
+  // }
 
-  :hover {
-    img {
-      opacity: ${(props) => props.opacity || 0.5};
-    }
-    h2,
-    p {
-      opacity: ${(props) => props.opacity || 1};
-    }
-  }
+  // :hover {
+  //   img {
+  //     opacity: ${(props) => props.opacity || 0.5};
+  //   }
+  //   h2,
+  //   p {
+  //     opacity: ${(props) => props.opacity || 1};
+  //   }
+  // }
 `;
 
 const StyledHoverContainer = styled.div`
@@ -42,22 +42,33 @@ const StyledHoverContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  
   
 
 `;
 const StyledProjectTitle = styled(H2)`
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
+  color: #7C7C7C;
+  margin: 0;
+
 
 `;
 
 const StyledProjectName = styled(H2)`
   margin:0;
   display: flex;
-  flex-direction: column;
   position: relative;
+  margin:0;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 48px;
   z-index: 1;
+  b{
+    font: 700 32px 'Poppins', sans-serif;
+    line-height: 48px;
+    margin-left: 10px;
+  }
   
 `;
 
@@ -72,14 +83,17 @@ z-index: -1;
   
 `;
 const StyledDescription = styled(P)`
-  
+margin: 2% 0;
+line-height: 21px;
+font-size: 18px;
 `;
 
 export default function Projects() {
   const projects = [
     {
       title: "Application re-design",
-      name: "The Moment",
+      name:  "The",
+      nameBold: "Moment",
       description: "Dating App UI Design",
       image: "/homepage/image11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
@@ -87,7 +101,8 @@ export default function Projects() {
     },
     {
       title: "Application case study",
-      name: "BOAR",
+      name: "",
+      nameBold: "BOAR",
       description:
         "Restaurant business supporting app",
       image: "/homepage/image10.png",
@@ -96,7 +111,8 @@ export default function Projects() {
     },
     {
       title: "UI design daily challenges",
-      name: "DAILY UI",
+      name: "DAILY",
+      nameBold: "UI",
       description:
         "See more on bēhance",
       image: "/homepage/rectangle9.png",
@@ -105,7 +121,8 @@ export default function Projects() {
     },
     {
       title: "COCO",
-      name:"Community Collaboration Project",
+      name:"Community Collaboration",
+      nameBold:"Project",
       description: "Project in progress",
       image: "/homepage/Rectangle11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
@@ -122,7 +139,7 @@ export default function Projects() {
               <Image src={project.image} width="700" height="400" alt="" />
               <StyledHoverContainer className="show">
                 <StyledProjectTitle >{project.title}</StyledProjectTitle>
-                <StyledProjectName>{project.name}<StyledUnderliner></StyledUnderliner></StyledProjectName>
+                <StyledProjectName>{project.name}<b>{project.nameBold}</b><StyledUnderliner></StyledUnderliner></StyledProjectName>
                 <StyledDescription>{project.description}</StyledDescription>
               </StyledHoverContainer>
             </StyledCard>

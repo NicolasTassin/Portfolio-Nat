@@ -19,7 +19,7 @@ const StyledH1 = Styled.h1`
     font-family: "Merriweather", serif;
     `;
 
-    const StyledAnimationContainer = Styled.div`
+const StyledAnimationContainer = Styled.div`
     display: flex;
     `;
 
@@ -45,18 +45,16 @@ const StyledAnimatedH3 = Styled(StyledH3)`
     }
     `;
 
-
-
 export default function Title() {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
 
-  const words = ["UX Designer","UI Designer","Product Designer"];
+  const words = ["UX Designer", "UI Designer", "Product Designer"];
   const title = "Hello! I'm Sasiya";
   const subtitle = "I'm a   ";
   const subtitle2 = "I love fun UI, collaboration and solving problem";
-//https://levelup.gitconnected.com/typing-effect-in-react-56697def0473
+  //https://levelup.gitconnected.com/typing-effect-in-react-56697def0473
   useEffect(() => {
     if (index === words.length - 1 && subIndex === words[index].length) {
       return;
@@ -86,22 +84,26 @@ export default function Title() {
   }, [subIndex, index, reverse]);
 
   // blinker
-//   useEffect(() => {
-//     const timeout2 = setTimeout(() => {
-//       setBlink((prev) => !prev);
-//     }, 500);
-//     return () => clearTimeout(timeout2);
-//   }, [blink]);
+  //   useEffect(() => {
+  //     const timeout2 = setTimeout(() => {
+  //       setBlink((prev) => !prev);
+  //     }, 500);
+  //     return () => clearTimeout(timeout2);
+  //   }, [blink]);
   return (
     <StyledContainer>
       <StyledH1>{title}</StyledH1>
       <StyledAnimationContainer>
-      <StyledH3>{subtitle}</StyledH3>
-      <StyledAnimatedH3>{`${words[index].substring(0, subIndex)}`}</StyledAnimatedH3>
+        <StyledH3>{subtitle}</StyledH3>
+        <StyledAnimatedH3>{`${words[index].substring(
+          0,
+          subIndex
+        )}`}</StyledAnimatedH3>
       </StyledAnimationContainer>
       <StyledH3>{subtitle2}</StyledH3>
-      <StyledButton margin=' 5% 0 10% 0'><a>READ MORE</a></StyledButton>
+      <StyledButton margin=" 5% 0 10% 0">
+        <a>READ MORE</a>
+      </StyledButton>
     </StyledContainer>
-    
   );
 }
