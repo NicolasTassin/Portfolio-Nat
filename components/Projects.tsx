@@ -133,7 +133,9 @@ export default function Projects() {
   return (
     <StyledCardContainer id="work">
       {projects.map((project, index) => {
+        console.log(project.appLink.startsWith('http'))
         return (
+          project.appLink.startsWith('http')?
           <Link href={project.appLink} key={index} passHref>
             <StyledCard key={index} opacity={ project.title == "Project Development" ? 1 : 0}>
               <Image src={project.image} width="700" height="400" alt="" />
@@ -144,6 +146,17 @@ export default function Projects() {
               </StyledHoverContainer>
             </StyledCard>
           </Link>
+          :
+          <a target="_blank" rel='noreferrer' href={project.appLink} key={index} >
+            <StyledCard key={index} opacity={ project.title == "Project Development" ? 1 : 0}>
+              <Image src={project.image} width="700" height="400" alt="" />
+              <StyledHoverContainer className="show">
+                <StyledProjectTitle >{project.title}</StyledProjectTitle>
+                <StyledProjectName>{project.name}<b>{project.nameBold}</b><StyledUnderliner></StyledUnderliner></StyledProjectName>
+                <StyledDescription>{project.description}</StyledDescription>
+              </StyledHoverContainer>
+            </StyledCard>
+          </a>
         );
       })}
     </StyledCardContainer>
