@@ -75,7 +75,7 @@ export default function Footer() {
   return (
     <footer>
       <FooterContainer>
-        <p>nutt@me.com</p>
+        <p>nutt723@me.com</p>
         
           <UlContainer>
             <LiContainer>
