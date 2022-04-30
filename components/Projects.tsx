@@ -21,20 +21,20 @@ const StyledCard = styled.div<{ opacity: number}>`
   justify-content: center;
   cursor: pointer;
   position: relative;
-  // h2,
-  // p {
-  //   opacity: ${(props) => props.opacity || 0};
-  // }
+  h2,
+  p {
+    opacity: ${(props) => props.opacity || 0};
+  }
 
-  // :hover {
-  //   img {
-  //     opacity: ${(props) => props.opacity || 0.5};
-  //   }
-  //   h2,
-  //   p {
-  //     opacity: ${(props) => props.opacity || 1};
-  //   }
-  // }
+  :hover {
+    img {
+      opacity: ${(props) => props.opacity || 0.5};
+    }
+    h2,
+    p {
+      opacity: ${(props) => props.opacity || 1};
+    }
+  }
 `;
 
 const StyledHoverContainer = styled.div`
