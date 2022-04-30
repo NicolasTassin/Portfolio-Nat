@@ -345,7 +345,7 @@ const Project1: NextPage = () => {
       <Imagecontainer>
         <div className="title">
           <H2>WIRE</H2>
-          <H2 fontWeight="700px" marginLeft="1%">
+          <H2 fontWeight="700px" >
             FRAMES
           </H2>
         </div>
@@ -364,7 +364,7 @@ const Project1: NextPage = () => {
             src="/themoment/03.png"
             alt="Project 1"
             width={1090}
-            height={600}
+            height={679}
             layout="responsive"
           />
         </Imagecontainer>
