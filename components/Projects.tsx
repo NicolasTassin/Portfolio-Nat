@@ -98,6 +98,7 @@ export default function Projects() {
       image: "/homepage/image11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/themoment",
+      type:"internal",
     },
     {
       title: "Application case study",
@@ -108,6 +109,7 @@ export default function Projects() {
       image: "/homepage/image10.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/boar",
+      type:"internal",
     },
     {
       title: "UI design daily challenges",
@@ -118,6 +120,7 @@ export default function Projects() {
       image: "/homepage/rectangle9.png",
       link: "https://www.behance.net/gallery/139389089/DailyUI-Challenge-001-007",
       appLink: "https://www.behance.net/gallery/139389089/DailyUI-Challenge-001-007",
+      type:"external",
     },
     {
       title: "COCO",
@@ -127,15 +130,17 @@ export default function Projects() {
       image: "/homepage/Rectangle11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
       appLink: "/smartcontract",
+      type:"internal",
     },
   ];
 
   return (
     <StyledCardContainer id="work">
       {projects.map((project, index) => {
+        console.log(project.type, "project type")
         return (
+          project.type === "internal" ? (
           <Link href={project.appLink} key={index} passHref>
-            
             <StyledCard key={index} opacity={ project.title == "Project Development" ? 1 : 0}>
               <Image src={project.image} width="700" height="400" alt="" />
               <StyledHoverContainer className="show">
@@ -146,6 +151,19 @@ export default function Projects() {
             </StyledCard>
             
           </Link>
+          ) : (
+            <a href={project.appLink} target={'blank'} key={index}>
+            <StyledCard key={index} opacity={ project.title == "Project Development" ? 1 : 0}>
+              <Image src={project.image} width="700" height="400" alt="" />
+              <StyledHoverContainer className="show">
+                <StyledProjectTitle >{project.title}</StyledProjectTitle>
+                <StyledProjectName>{project.name}<b>{project.nameBold}</b><StyledUnderliner></StyledUnderliner></StyledProjectName>
+                <StyledDescription>{project.description}</StyledDescription>
+              </StyledHoverContainer>
+            </StyledCard>
+            
+          </a>
+          )
         );
       })}
     </StyledCardContainer>
