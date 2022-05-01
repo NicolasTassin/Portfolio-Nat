@@ -62,7 +62,7 @@ const WhiteSpace = styled.div`
   width: 100%;
 `;
 const Description = styled.div`
-margin: 5% auto 5%;
+margin: 7% auto 5%;
 font: 300 18px 'Poppins', sans-serif;
 line-height: 26px;
 `;
