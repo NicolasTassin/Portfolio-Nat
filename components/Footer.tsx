@@ -6,6 +6,8 @@ const FooterContainer = Styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: ${globalStyles.margin};
+    font-family: "Poppins", sans-serif;
     
     margin-top: 5%;
     
@@ -19,6 +21,8 @@ const FooterContainer = Styled.div`
     letter-spacing: 0.05em;
     @media (max-width: 768px) {
       flex-direction: column;
+      margin: 0;
+      
     }
     `;
 
@@ -29,6 +33,8 @@ const UlContainer = Styled.ul`
     width: 25%;
     @media (max-width: 768px) {
       padding:0;
+      width: 50%;
+      
     }
     
     

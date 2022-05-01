@@ -305,8 +305,6 @@ const Project1: NextPage = () => {
             />
           </ImageGrid>
         </StyledContainer>
-
-        <Footer />
       </StyledAppContainer>
     </MainContainer>
   );

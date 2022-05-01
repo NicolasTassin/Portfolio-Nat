@@ -117,7 +117,6 @@ const About: NextPage = () => {
         </ContentRight>
       </AboutContainer>
       <NavContainer>
-      <Footer />
       </NavContainer>
     </MainContainer>
   );

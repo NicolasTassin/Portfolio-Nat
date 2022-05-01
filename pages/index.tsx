@@ -29,7 +29,6 @@ const Home: NextPage = () => {
       <NavBar />
       <Title />
       <Projects />
-      <Footer />
     </StyledAppContainer>
   )
 }
