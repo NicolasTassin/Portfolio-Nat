@@ -137,7 +137,6 @@ export default function Projects() {
   return (
     <StyledCardContainer id="work">
       {projects.map((project, index) => {
-        console.log(project.type, "project type")
         return (
           project.type === "internal" ? (
           <Link href={project.appLink} key={index} passHref>
