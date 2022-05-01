@@ -100,7 +100,7 @@ export default function Footer() {
             </Point>
             <LiContainer>
               <ListContainer></ListContainer>
-              <a href="mailto:mailto:nutt723@me.com">Contact</a>
+              <a href="mailto:nutt723@me.com">Contact</a>
             </LiContainer>
           </UlContainer>
         
