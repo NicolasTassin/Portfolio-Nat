@@ -123,9 +123,9 @@ export default function Projects() {
       type:"external",
     },
     {
-      title: "COCO",
-      name:"Community Collaboration",
-      nameBold:"Project",
+      title: "Community Collaboration Project",
+      name:"",
+      nameBold:"COCO",
       description: "Project in progress",
       image: "/homepage/Rectangle11.png",
       link: "https://www.behance.net/gallery/124327345/MOSH-Mens-health-made-easy?tracking_source=search_projects",
