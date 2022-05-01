@@ -311,7 +311,7 @@ const Project1: NextPage = () => {
               <H2 fontWeight="700px" fontSize="24px">
                 {content.designGoal.content2.title}
               </H2>
-              <H3>{content.designGoal.content3.content}</H3>
+              <H3>{content.designGoal.content2.content}</H3>
             </HowItWorks>
             <HowItWorks>
               <H2 fontWeight="700px" fontSize="24px">
