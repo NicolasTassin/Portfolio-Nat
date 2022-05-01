@@ -158,7 +158,7 @@ const Project1: NextPage = () => {
               <b>Booking & Ordering App for Restaurant business. </b>
             </Description>
             <Button>
-              <a href="https://www.figma.com/proto/g1Wnv2OnwpgYfM9pK2nyfN/Restaurant-cafe-ordering-app?node-id=103%3A1050&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=163%3A1050">
+              <a target={"blank"} href="https://www.figma.com/proto/g1Wnv2OnwpgYfM9pK2nyfN/Restaurant-cafe-ordering-app?node-id=103%3A1050&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=163%3A1050">
                 VIEW PROTOTYPE
               </a>
             </Button>

@@ -247,7 +247,7 @@ const Project1: NextPage = () => {
             <StyledTitle>{content.header.projectDescription}</StyledTitle>
             <Name>{content.header.title}</Name>
             <H3>{content.header.description}</H3>
-            <StyledButton><a href="https://www.figma.com/proto/iwisCXdbkfRNpHMnKwS9zz/The-moment?page-id=0%3A1&node-id=73%3A65&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=74%3A65">VIEW PROTOTYPE</a></StyledButton>
+            <StyledButton><a target={"blank"} href="https://www.figma.com/proto/iwisCXdbkfRNpHMnKwS9zz/The-moment?page-id=0%3A1&node-id=73%3A65&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=74%3A65">VIEW PROTOTYPE</a></StyledButton>
           </TitleContainer>
         </StyledTitleContainer>
       </StyledAppContainer>

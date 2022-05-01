@@ -12,6 +12,11 @@ const StyledContainer = Styled.div`
     @media (max-width: 768px) {
       grid-template-row: 1fr 1fr;
   }
+  img{
+    :hover{
+      cursor: pointer;
+    }
+  }
   @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
